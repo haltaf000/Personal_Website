@@ -1,0 +1,58 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron">
+
+    <div class="container">
+        <div class='row text-center'>
+            <img src="{% static 'Images/164538.jpg' %}" width="150" height="190"> 
+        </div>
+
+        <div class="row text-center">
+            <h2>📝 Posts</h2>
+            <p>Read about my adventures, experiences, and opinions</p>
+            <hr>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="writings">
+
+    <div class="container">
+        {% csrf_token %}
+        {% for post in object_list %}
+            <h3><a href="{% url 'article_details' post.pk %}">{{post.title}}</a></h3>
+            <p>{{post.description}}</p>
+            <small>{{post.date}}</small>
+            <small>
+            {% if user.is_authenticated %}
+                <a href="{% url 'update_post' post.pk %}">(Edit)</a>
+                <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+            {% endif %}
+            </small>
+            <hr>
+            <br>
+            
+        {% endfor %}
+    </div>
+    {% if user.is_authenticated %}
+    <a href="{% url 'post' %}">Add Post</a>
+
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</section>
+
+{% endblock %} 

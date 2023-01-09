@@ -1,0 +1,21 @@
+{% extends 'website/index.html' %}
+
+{% block content %}
+<section class='contact'>
+
+{% if user.is_authenticated %}
+    <h2>Add Skill</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-">Skill Up</button>
+    </form>
+{% else %}
+
+    You're not belong here! Please do not do this!
+{% endif %}
+</section>
+
+{% endblock %}

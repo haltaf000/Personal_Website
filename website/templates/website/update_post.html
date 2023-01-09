@@ -1,0 +1,20 @@
+{% extends 'website/index.html' %}
+
+{% block content %}
+<section class='contact'>
+{% if user.is_authenticated %}
+    <h2>Edit Blog Post</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-">Update</button>
+    </form>
+{% else %}
+
+You do not belong here! Please do not do this!
+
+</section>
+{% endif %}
+{% endblock %}

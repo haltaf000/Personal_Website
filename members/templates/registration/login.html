@@ -1,0 +1,15 @@
+
+{% block title %}Login{% endblock %}
+{% block content %}
+<section class='contact'>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-">Login</button>
+</form>
+
+</section>
+
+{% endblock %}

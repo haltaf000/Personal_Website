@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+    <title>Haider Altaf</title>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    {% endblock %}
+</head>
+<body class="d-flex flex-column min-vh-100" > <!--class="d-flex flex-column min-vh-100"-->
+    
+   <header>
+        <div class='container '>
+            <div class="row text-left">
+                <div class='col-sm-7 col-md-7 col-lg-7 col-xl-7'>
+                    <h2>Haider Altaf 🚀</h2>
+                </div>
+                <div class='col-sm-5 col-md-5 col-lg-5 col-xl-5'></div>
+                    <nav>
+                        <p><a href="{% url 'home' %}">HOME</a></p>
+                        <p><a href="{% url 'about' %}">ABOUT</a></p>
+                        <p><a href="{% url 'portfolio' %}">PORTFOLIO</a></p>
+                        <p><a href="{% url 'writings' %}">BLOG</a></p>
+                    </nav> 
+                </div>
+            </div>
+        </div>
+      </header>
+
+        
+      
+      <section class="contact1">
+            <ul class="contact1-list">
+                <li class="contact1-link">
+                    <a href="https://github.com/haltaf000"> <ion-icon size="large" name="logo-github"></ion-icon></a>
+                </li>
+
+                <li class="contact1-link"></li>
+                    <a><ion-icon size="large" name="document-outline"></ion-icon></a>
+                </li>
+
+                <li class="contact1-link">
+                    <a href="https://www.linkedin.com/in/haideraltaf/"><ion-icon size="large" name="logo-linkedin"></ion-icon></a>
+                </li>
+
+                <li class="contact1-link">
+                    <a href="https://medium.com/@haider.altaf1996"><ion-icon size="large" name="logo-medium"></ion-icon></a>
+                </li>
+
+                <li class="contact1-link">
+                    <a href="mailto:haideraltaf804@gmail.com"><ion-icon size="large" name="mail-outline"></ion-icon>
+                    </a>
+                </li>
+
+            
+                <div class="vertical1-line"></div>
+        </section>
+        
+    {% block content %}
+
+
+    
+    {% endblock %}
+    <footer class="mt-auto"> 
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h4>Be uncomfortable and thrive 🧑‍🏭   |   &copy; Haider Altaf  2022</h4>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+          
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 150;
+          
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+          
+          window.addEventListener("scroll", reveal);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+

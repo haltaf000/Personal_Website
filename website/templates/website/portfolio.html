@@ -1,0 +1,59 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron">
+
+    <div class="container">
+        <div class='row text-center'>
+            <img src="{% static 'Images/snoopy.gif' %}" width="210" height="240"> 
+        </div>
+
+        <div class="row text-center">
+            <h2>💾 Projects</h2>
+            <p class="p1">You can find my projects on github, but listed below are some of my featured work.</a></p>
+            <hr>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="writings">
+    <div class="container">
+        {% for project in object_list %}
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-left">
+                    <h3><a href="{{ project.url }}">{{ project.title }}</a></h3> 
+                    <p>{{ project.description }}</p>
+                    <h4><a href="{{ project.github }}">GitHub</a></h4> 
+                    <small>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'update_project' project.pk %}">(Edit)</a>
+                            <a href="{% url 'delete_project' project.pk %}">(Delete)</a>
+                        {% endif %}
+                    </small>        
+                </div>
+            </div>
+            <hr>
+
+        {% endfor %}
+
+{% if user.is_authenticated %}
+    <a href="{% url 'project' %}">Add Project</a>
+
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</section>
+
+{% endblock %}

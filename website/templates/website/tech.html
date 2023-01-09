@@ -1,0 +1,58 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron">
+
+    <div class="container">
+        <div class='row text-center'>
+            <img src="{% static 'Images/2096107.jpg' %}" width="190" height="220"> 
+        </div>
+
+        <div class="row text-center">
+            <h2>🛠️ Tech</h2>
+            <p class="p1">List of my favorite gear and the stuff I use to stay productive!</a></p>
+            <hr>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tech">
+    <div class="container">
+        {% for skill in object_list %}
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-left">
+                    <h3>{{ skill.title }}</h3> 
+                    <p>{{ skill.body }}</p>
+                    <small>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'update_skill' skill.pk %}">(Edit)</a>
+                            <a href="{% url 'delete_skill' skill.pk %}">(Delete)</a>
+                        {% endif %}
+                    </small>        
+                </div>
+            </div>
+            
+
+        {% endfor %}
+
+{% if user.is_authenticated %}
+    <a href="{% url 'skill' %}">Add Skill</a>
+
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</section>
+
+{% endblock %}

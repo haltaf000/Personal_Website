@@ -1,0 +1,129 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron">
+    <div class="container mt-4 pt-4">
+        <div class='row text-center'>
+            <img src="{% static 'Images/root.jpg' %}" width="180" height="230"> 
+        </div>
+        <div class="row text-center">
+            <h2>👨‍💻 About Me</h2>
+            <p>For the past couples of years, I've been writing in binary, and reading about lost worlds in history.</p>
+            <hr class="line"> 
+        </div>
+    </div>
+</section>
+
+<section class="About">
+    <div class="container reveal mt-4 pt-4">
+        <div class='row'>
+            <h2>Who Am I?</h2>
+                <ol>
+                    <li><p>💻 I'm a programmer based in NYC. I developed an interest in coding and problem solving in High School. Studied History and CS in college!</p></li>
+                    <li><p>🖋️ Over the past year, I started writing about my experiences as a developer, on productivity, and history of science and technology.</p></li>
+                    <li><p>📈 I'm a data scientist in Fintech where I leverage my data exploration and visualization skills to build valuable ML and AI models. </p></li>
+                    <li><p>📖 Also, I am an avid reader and writer. I read one book a week, and in the process of writing one myself. </p></li>
+                </ol>
+        </div>
+    </div>
+    <div class="container reveal mt-4 pt-4">
+        <div class='row'>
+            <h2>Personal Interests and Projects</h2>
+                <ol>
+                    <li><p>💸 Working on a website that will allow users to plan, update, and organize their finances and budgets. (Will use AI and Machine Learning) </p></li>
+                    <li><p>🎤 Will be starting a website, The OutCast, where we'll discuss politics, history, technology, and etc... The team has decided to launch the first print in August 2022!</p></li>
+                    <li><p>📷 Besides work, you can find me roaming NYC taking pictures, playing soccer or tennis, and learning how to cook!</p></li>
+                </ol>
+        </div>
+    </div>
+    </section>
+
+    <section id='Find' class="bg-light mt-3">
+        <div class='container reveal mt-4 pt-4'>
+            <div class='text-center'>
+                <h2>Want to Know More? Check Out My Work!</h2>
+            </div>
+
+        <div class="row my-5 align-items-center justify-content-center g-0">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="card border-3">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Portfolio</h4>
+                        <h1>🗂️</h1>
+                        <br>
+                        <a href="{% url 'portfolio' %}" class="btn btn-outline-primary btn-lg mt-3">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="card border-3">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Github</h4>
+                        <h1>📋</h1>
+                        <br>
+                        <a href="https://github.com/haltaf000" class="btn btn-outline-secondary btn-lg mt-3">Github</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="card border-3">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Tech</h4>
+                        <h1>⌨️</h1>
+                        <br>
+                        <a href="{% url 'tech' %}" class="btn btn-outline-primary btn-lg mt-3">Tech</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class='contact'>
+        <h2>Or Let's Get In Touch! 📧</h2>
+        <form action="{% url 'about' %}" method="post">
+            {% csrf_token %}
+            <tr>
+                <th>
+                    <label for="id_email">Email:</label>
+                </th>
+                <td>
+                    <input type="email" name="email" maxlength="254" required id="id_email">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="id_subject">Subject:</label>
+                </th>
+                <td>
+                    <input type="text" name="subject" maxlength="255" required id="id_subject">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="id_message">Message:</label>
+                </th>
+                <td>
+                    <textarea name="message" cols="40" rows="10" required id="id_message"></textarea>
+                </td>
+            </tr>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+
+{% endblock %}
