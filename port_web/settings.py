@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-40#hdw@urweu*5
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-
+ALLOWED_HOSTS = ['personalwebsite-production-1e66.up.railway.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://personalwebsite-production-1e66.up.railway.app/']
 
 
 # Application definition
