@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 
-from matplotlib.pyplot import title
 # Create your models here.  
  
 class Post(models.Model):
