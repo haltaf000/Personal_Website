@@ -11,7 +11,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     description = models.TextField(default="Add description here.")
-    date = models.DateTimeField(auto_now_add=True) 
+    date = models.DateTimeField(null=True) 
     
     def __str__(self):
         return self.title
