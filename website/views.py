@@ -18,6 +18,9 @@ def about(request):
 def success(request):
     return render(request, "website/success.html", {})
 
+def resume_page(request):
+    return render(request, "website/resume.html", {})
+
 def about(request):
     if request.method == 'POST':
         email = request.POST['email']

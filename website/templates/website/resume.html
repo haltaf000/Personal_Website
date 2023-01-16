@@ -1,0 +1,81 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="writings">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Resume</h1>
+        </div>
+      </div>
+      <br>
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Work Experience</h2>
+            <br>
+            <h3>ML Software Engineer</h3>
+            <p>Bloomberg LP, New York, NY  |  April 2021 - Present</p>
+           
+           <br>
+            <h3>Data Analyst / Entry </h3>
+            <p>US Census, New York, NY  |  May 2020 – November 2020</p>
+            <br>
+
+            <h3>Data Science / Engineer Intern  </h3>
+            <p>Charity Water, New York, NY  |  September 2019 – January 2020</p>
+            <br>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Education</h2>
+            <br>
+            <h3>BA / MA</h3>
+            <p>City College of New York CUNY</p>
+            <p>Graduated: May 2020</p>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+           <h2>Skills</h2>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><p>Python</p></li>
+              <li><p>R</p></li>
+              <li><p>SQL</p></li>
+              <li><p>C/C++</p></li>
+              <li><p>JavaScript</p></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li><p>Machine Learning</p></li>
+              <li><p>Data Visualization</p></li>
+              <li><p>Data Analysis</p></li>
+              <li><p>Backend Engineering</p></li>
+              <li><p>Django/Flask</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+
+</section>
+
+{% endblock %}
+
+

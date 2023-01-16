@@ -5,6 +5,7 @@ from .views import HomeView, PostDetailView, UpdatePostView, AddPostView, Delete
 urlpatterns = [
     path("", views.home, name="home"),
     path('about/', views.about, name='about'), 
+    path('resume/', views.resume_page, name='resume'),
     path('porfolio', ProjectView.as_view(), name='portfolio'),
     path('tech', TechView.as_view(), name='tech'),
     path('success',views.success, name='success'),
