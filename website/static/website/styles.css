@@ -305,7 +305,7 @@ hr {
 
 .writings h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 43px;
     font-weight: 600;
 
 }
@@ -447,6 +447,6 @@ small {
 }
 
 ion-icon {
-    color: rgb(138, 179, 255);
+    color: rgb(207, 149, 82);
     --ionicon-stroke-width: 24px;
   }
