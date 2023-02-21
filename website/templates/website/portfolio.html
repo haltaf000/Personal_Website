@@ -18,11 +18,9 @@
             <hr>
 
 
-<section class="writings">
-    <div class="container">
+<section>
         {% for project in object_list %}
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 text-left">
+        
                     <h3><a href="{{ project.url }}">{{ project.title }}</a></h3> 
                     <p>{{ project.description }}</p>
                     <p><a href="{{ project.github }}">GitHub</a></p> 
@@ -32,8 +30,7 @@
                             <a href="{% url 'delete_project' project.pk %}">(Delete)</a>
                         {% endif %}
                     </small>        
-                </div>
-            </div>
+
           
 
         {% endfor %}

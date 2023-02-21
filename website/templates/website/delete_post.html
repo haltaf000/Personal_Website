@@ -1,38 +1,33 @@
 {% extends 'website/index.html' %}
 
 {% block content %}
-<section class='contact'>
-    <div class="container">
-        <div class="row text-center">
-            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+<main>
+        <section>
 
-{% if user.is_authenticated %}
-    <h2>Delete Blog Post</h2>
+        {% if user.is_authenticated %}
+            <h2>Delete Blog Post</h2>
 
-    <h3>Delete: {{ post.title }}</h3>
-    <form method="POST">
-        {% csrf_token %}
-        <strong>Are your Sure?!</strong> <br/> <br/>
-        <button class="btn btn-primary">Delete</button>
-        <br>
-        <br>
-        <a class="btn btn-primary" href="{% url 'writings' %}" role="button">Back</a>
-    </form>
-{% else %}
+            <h3>Delete: {{ post.title }}</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <strong>Are your Sure?!</strong> <br/> <br/>
+                <button class="btn btn-primary">Delete</button>
+                <br>
+                <br>
+                <a class="btn btn-primary" href="{% url 'writings' %}" role="button">Back</a>
+            </form>
+        {% else %}
 
-You're not belong here! Please do not do this!
+        You're not belong here! Please do not do this!
 
 
 
+                    </div>
+                </div>  
             </div>
-        </div>  
-    </div>
 
-{% endif %}
+        {% endif %}
 
-
-
-
-</section>
-
+        </section>
+</main>
 {% endblock %}

@@ -195,12 +195,15 @@ section {
     padding-top: 10px;
 }
 
-section .p {
+section p {
     line-height: 1.2; 
     margin-bottom: 10px;
+    text-decoration: none;
   }
 
-
+section h3 {
+    text-decoration: none;
+}
 
 .section {
     padding-top: 10px;
@@ -209,6 +212,8 @@ section .p {
 .section h2 {
     text-align: center;
   }
+
+
 
 
   @media only screen and (max-width: 767px) {
