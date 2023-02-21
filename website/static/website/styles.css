@@ -1,4 +1,3 @@
-/*Custom design for all pages */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@1,300&display=swap');
 html {
     scroll-behavior: smooth;
@@ -173,6 +172,7 @@ border-radius: 5px;
 padding: 10px 20px;
 font-size: 1em;
 cursor: pointer;
+width: 75;
 }
 
 form input[type="submit"]:hover {
@@ -189,6 +189,38 @@ section {
 }
 
 section .p {
-    line-height: 1.2; /* This sets the line height to 1.2 times the font size */
-    margin-bottom: 10px; /* This adds 10 pixels of margin below each paragraph */
+    line-height: 1.2; 
+    margin-bottom: 10px;
+  }
+
+
+
+.section {
+    padding-top: 10px;
+}
+
+.section h2 {
+    text-align: center;
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    header {
+      padding: 0 50px;
+    }
+    main {
+      padding: 0 50px;
+    }
+    .wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 50px;
+    }
+    .one {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .two {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
