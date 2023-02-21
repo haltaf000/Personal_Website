@@ -3,46 +3,55 @@
 
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
 {% endblock %}
 
 {% block content %}
 
+<main>
 
- <section class="jumbotron" style="background: url(/static/Images/stars.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" >
-
-    <div class="container">
-        <!--
-        <div class='row text-center'>
-            <img src="{% static 'Images/mountain.png' %}" width="325" height="335"> 
-        </div>
-        -->
-        <div class="row text-left">
-            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
-                <h4>HELLO 👋, I am...</h4>
-                <h4><span class="multicolortext auto-type"></span></h4>
-                <br>
-                <br>
-            </div>
-        </div>  
-        <div class="row text-left">
-            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
-                <a class="btn btn-primary" href="{% url 'about' %}" role="button"> Explore !</a>
-            </div>
-        </div>  
-     </div>
+<section>
+    <h2>Hello, There!</h2>
+        <ol>
+            <li><p>💻 I'm a programmer based in NYC. I developed an interest in coding and problem solving in High School. Studied History and CS in college!</p></li>
+            <li><p>🖋️ Over the past year, I started writing about my experiences as a developer, on productivity, and history of science and technology.</p></li>
+            <li><p>📈 I'm a data scientist in Fintech where I leverage my data exploration and visualization skills to build valuable ML and AI models. </p></li>
+            <li><p>📖 Also, I am an avid reader and writer. I read one book a week, and in the process of writing one myself. </p></li>
+        </ol>
+    </section>
+<section>
+    <h2>Personal Interests and Projects</h2>
+        <ol>
+            <li><p>💸 Working on a website that will allow users to plan, update, and organize their finances and budgets. (Will use AI and Machine Learning) </p></li>
+            <li><p>🎤 Will be starting a website, The OutCast, where we'll discuss politics, history, technology, and etc... The team has decided to launch the first print in August 2022!</p></li>
+            <li><p>📷 Besides work, you can find me roaming NYC taking pictures, playing soccer or tennis, and learning how to cook!</p></li>
+        </ol>
 </section>
 
+<section>
+    <h2>Want to Know More? Check Out My Work!</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<div class="card-container">
+    <div class="card">
+        <h1>🗂️</h1>
+    
+        <a href="{% url 'portfolio' %}" class="btn btn-outline-primary btn-lg mt-3">Portfolio</a>
+    </div>
+    <div class="card">
+        <h1>📋</h1>
 
-<script>
-    var typed = new Typed(".auto-type", {
-        strings: ['Haider', 'a software engineer', 'a writer', 'an explorer, photographer, and sports enthusiast.'],
-        typeSpeed: 55,
-        backSpeed: 10,
-        loop: true
-    })
-</script>
+        <a href="https://github.com/haltaf000" class="btn btn-outline-secondary btn-lg mt-3">Github</a>
+    </div>
+    <div class="card">
+        <h1>⌨️</h1>
+    
+        <a href="{% url 'tech' %}" class="btn btn-outline-primary btn-lg mt-3">Tech</a>
+    </div>
+</div>
+
+</section>
+</main>
+
+
 
 {% endblock %}

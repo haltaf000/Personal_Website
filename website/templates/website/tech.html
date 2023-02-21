@@ -8,26 +8,14 @@
 {% endblock %}
 
 {% block content %}
+<main>
 
-<section class="jumbotron">
-
-    <div class="container">
-        <div class='row text-center'>
-            <img src="{% static 'Images/2096107.jpg' %}" width="190" height="220"> 
-        </div>
-
-        <div class="row text-center">
+        
             <h2>🛠️ Tech</h2>
             <p class="p1">List of my favorite gear and the stuff I use to stay productive!</a></p>
             <hr>
 
-        </div>
 
-    </div>
-
-</section>
-
-<section class="tech">
     <div class="container">
         {% for skill in object_list %}
             <div class="row">
@@ -42,11 +30,11 @@
                     </small>        
                 </div>
             </div>
-            
+    </div>        
 
         {% endfor %}
 
 
-</section>
 
+</main>
 {% endblock %}

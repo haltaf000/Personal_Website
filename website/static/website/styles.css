@@ -1,455 +1,194 @@
 /*Custom design for all pages */
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@1,300&display=swap');
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    margin: 0px;
-    padding: 0px;
-    
-}
-
-header {
-    padding: 10px 10px;
-
-}
-  
-header .row,
-footer .row {
-    display: flex;
-    align-items: center;
-}
-  
-header h2 {
+    font-family: 'OPEN SANS';
     padding-top: 10px;
-    font-weight: 600;
-    margin: 0;
-    font-family: cursive;
-    padding-bottom: 10px;
-}
-  
-header nav {
-    display: flex;
-    justify-content: center;
+    background-color: whitesmoke;
 }
 
-header p a {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    font-weight: 400;
-    word-spacing: -35px;
-    font-family: cursive;
+header{
+    padding: 0 275px;
 }
 
-header p a:hover {
-    color: rgb(81, 187, 211);
-}
-  
-header p {
-    padding: 0 10px;
-    margin: 0;
-    color: black;
-    
-}
-
-
-.jumbotron {
-    display: flex;
-    align-items: center;
-    background-size: auto;
-    color: #000000;
-    height: 575px;
-    background-color: white;
-    margin: auto;
-}
-
-/*
-.reveal{
-    position: relative;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-.reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
-  */
-
-.jumbotron h2 {
-    font-size: 35px;
-    font-weight: 500 !important;
-    margin: 0;
-    padding-top: 20px;
+main  {
+    padding: 0 275px;
     padding-bottom: 20px;
-    word-spacing: -5px;
-    font-family: cursive;
-  }
-  
-.jumbotron h4 {
-    font-family: cursive;
-    margin-left: 10px;
-    word-spacing: 5px;
-    font-size: 40px;
-    font-weight: 540;
-    color: whitesmoke;
-  }
-
-
-.jumbotron p {
-    margin: 0 0 20px;
-    font-size: 20px;
-    font-family: cursive;
-    font-weight: 400;
-    
 }
 
-
-.jumbotron .btn {
-    color: white;
-    width: 125px;
-    font-size: small;
-    align-items: left;
-    margin-left: 10px;
+nav {
+    text-align: center;
+    word-spacing: 50px;
 }
 
-.jumbotron .btn:hover {
-	-webkit-transform: translateY(-1px);
-	transform: translateY(-2px);
-    color: aliceblue;
+nav p {
+    display: inline;    
 }
 
-.jumbotron .container .row{
-    align-items: center;
-}
-
-
-
-footer {
-    background-color: white;
-
-    border-color: black;
-
-}
-
-footer .container {
-    padding: 3px;
-}
-
-footer p {
-    font-size: 16px;
-    font-weight: 500;
+nav a {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
-footer h4 {
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 220px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.two {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+
+.contact1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
     padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+  }
+  
+  .contact1-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .contact1-link {
+    margin-right: 1rem;
+  }
+  
+  .contact1-link a {
+    background-color: transparent;
+    text-decoration: none;
+  }
 
+  ion-icon {
+    color: #333;
+    font-size: 1px;
+  }
+  
+  ion-icon:hover {
+    color: #333;
+  }
+  
+  
+  
 
-
-
-
-/*About Page */
-
-.About {
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    background-color: whitesmoke;
-}
-
-.About .container {
-    text-align: left;
-    padding: 10px 200px;
-}
-
-
-.About h2 {
-    font-family: Calibri;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 20px;
-}
-
-.About p {
-    font-size: 20px;
-    padding-bottom: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-input[type=text], input[type=email], textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-}
-
-
-.contact {
-    margin-top: 40px;
-    margin-left: 40px;
-}   
-.contact h2 {
-    text-align: center;
-    font-weight: 700;
-}
-
-.contact form {
-    padding: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, .4);
-}
-
-
-#Find {
-    background-color: whitesmoke;
-}
-
-#Find .container{
-    padding-top: 20px;
-    margin-bottom: 40px;
-}
-
-#Find h4{
-    font-weight: 700;
-}
-
-#Find h2{
-    font-weight: 700;
-}
-
-.card-body {
-    width: 300px;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: 55px;
-    margin-right: -75px;;
-    margin-bottom: 75px;
-    border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, .4);
+.card-container {
+display: flex;
+justify-content: space-between;
+padding-top: 20px;
 }
 
 .card {
-    display: flex;
+width: 30%;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+text-align: center;
+margin-right: 30px;
+transition: all 0.3s ease-in-out;
 }
 
-.card-body:hover {
-	-webkit-transform: translateY(-2px);
-	transform: translateY(-3px);
+.card:hover {
+transform: translateY(-10px); /* add hover effect */
 }
 
-.btn {
-    background-color: rgb(42, 87, 128);
-    color: white;
-    width: 125px;
-    font-size: small;
-    font-family: cursive;
+.card h2 {
+font-size: 1.5em;
+margin-bottom: 10px;
 }
 
-.btn:hover {
-	-webkit-transform: translateY(-1px);
-	transform: translateY(-2px);
-    color: aliceblue;
+.card p {
+font-size: 1em;
+line-height: 1.5;
 }
 
-
-
-#btn {
-    padding: 20px;
-}
-
-button {
-    border-radius: 70px;
-    padding: 3px 3px;
-    border: solid;
-}
-
-
-
-hr {
-    position: relative;
-    size: 300px;
-    width: 80px;
-    top: 5px;
-    bottom: 5px;
-    border: none;
-    height: 1px;
-    background: black;
-    
-}
-
-/* Portfolio Page */
-.writings {
-    padding-top: 43px;
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 55px;
-    background-color: whitesmoke;
-}
-
-.writings h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 43px;
-    font-weight: 600;
+.card a {
+text-align: center;
+text-decoration: none;
+color: black;
 
 }
 
-.writings h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    font-weight: 600;
+.card a.btn {
+font-size: 1.2em;
+padding: 10px 20px;
+border-radius: 5px;
+transition: all 0.3s ease-in-out; /* add transition */
+}
+
+.card a.btn:hover {
+background-color: black; /* change background color on hover */
+color: #fff; /* change text color on hover */
+}
+
+form {
+display: flex;
+flex-direction: column;
+margin: 20px auto;
+max-width: 600px;
+padding: 20px;
+background-color: white;
+border-radius: 5px;
+color: black;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 }
 
-.writings h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    font-weight: 400;
-
+form label {
+display: block;
+margin: 10px 0;
 }
 
-.writings h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-
+form input[type="email"],
+form input[type="text"],
+form textarea {
+padding: 10px;
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+margin-bottom: 20px;
 }
 
-.writings h5 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-
+form input[type="submit"] {
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 1em;
+cursor: pointer;
 }
 
-.writings h6 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-
+form input[type="submit"]:hover {
+background-color: #0062cc;
 }
 
-/*
-.writings h4:hover {
-    color: yellow;
-}*/
-
-.writings .container {
-    text-align: left;
-    padding: 10px 200px;
+img {
+border-radius: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.writings h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;
-    padding-bottom: 10px;
-    color: #001aff;
+section {
+    padding-top: 10px;
 }
 
-.writings p {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif
-}
-
-small {
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/*
-.multicolortext {
-    background-image: linear-gradient(to left, indigo, rgb(5, 5, 170), rgb(6, 100, 209), rgb(112, 10, 236));
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
+section .p {
+    line-height: 1.2; /* This sets the line height to 1.2 times the font size */
+    margin-bottom: 10px; /* This adds 10 pixels of margin below each paragraph */
   }
-*/
-  img {
-    padding-bottom: 20px;
-  }
-
-/* Portfolio Page */
-.tech {
-    padding-top: 43px;
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 55px;
-    background-color: whitesmoke;
-}
-
-
-.tech .container {
-    text-align: left;
-    padding: 10px 200px;
-}
-
-
-.tech h3 {
-    font-family: sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-
-.tech p {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: sans-serif;
-    padding-bottom: 10px;
-}
-
-.contact1 {
-	background: none;
-	position: fixed;
-	margin-left: 90.5%;
-	bottom: 0;
-	text-align: center;
-}
-.contact1-list {
-	text-align: center;
-	list-style-type: none;
-}
-.contact1-link {
-	font-size: 1.8em; 
-	margin-bottom: 0%;
-}
-.contact1-logo {
-	color: #bfbfbf;
-	transition: color 0.3s ease-in;
-}
-.contact1-logo:hover {
-	color: #2d5986;
-}
-.vertical1-line {
-	border-left: 1.5px solid #bfbfbf;
-	height: 12vh;
-	transform: translate(+50%);
-	  
-}
-
-ion-icon {
-    color: rgb(244, 116, 116);
-    --ionicon-stroke-width: 24px;
-  }
-  

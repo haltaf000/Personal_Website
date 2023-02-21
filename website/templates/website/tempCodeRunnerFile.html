@@ -1,0 +1,48 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+ <section class="jumbotron" style="background: url(/static/Images/stars.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" >
+
+    <div class="container">
+        <!--
+        <div class='row text-center'>
+            <img src="{% static 'Images/mountain.png' %}" width="325" height="335"> 
+        </div>
+        -->
+        <div class="row text-left">
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+                <h4>HELLO 👋, I am...</h4>
+                <h4><span class="multicolortext auto-type"></span></h4>
+                <br>
+                <br>
+            </div>
+        </div>  
+        <div class="row text-left">
+            <div class='col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+                <a class="btn btn-primary" href="{% url 'about' %}" role="button"> Explore !</a>
+            </div>
+        </div>  
+     </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ['Haider', 'a software engineer', 'a writer', 'an explorer, photographer, and sports enthusiast.'],
+        typeSpeed: 55,
+        backSpeed: 10,
+        loop: true
+    })
+</script>
+
+{% endblock %}

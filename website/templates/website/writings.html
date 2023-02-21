@@ -3,31 +3,17 @@
 
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+
 {% endblock %}
 
 {% block content %}
+<main>
 
-<section class="jumbotron">
-
-    <div class="container">
-        <div class='row text-center'>
-            <img src="{% static 'Images/164538.jpg' %}" width="150" height="190"> 
-        </div>
-
-        <div class="row text-center">
             <h2>📝 Posts</h2>
             <p>Read about my adventures, experiences, and opinions</p>
             <hr>
 
-        </div>
 
-    </div>
-
-</section>
-
-
-<section class="writings">
 
     <div class="container">
         {% csrf_token %}
@@ -45,7 +31,5 @@
             
         {% endfor %}
     </div>
-    
-</section>
-
+</main>
 {% endblock %} 
