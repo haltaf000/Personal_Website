@@ -14,27 +14,28 @@
             <h2>🛠️ Tech</h2>
             <p class="p1">List of my favorite gear and the stuff I use to stay productive!</a></p>
             <hr>
+      
 
 
-    <div class="container">
         {% for skill in object_list %}
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 text-left">
                     <h3>{{ skill.title }}</h3> 
                     <p>{{ skill.body }}</p>
                     <small>
-                        {% if user.is_authenticated %}
+                        {% if user.is_superuser %}
                             <a href="{% url 'update_skill' skill.pk %}">(Edit)</a>
                             <a href="{% url 'delete_skill' skill.pk %}">(Delete)</a>
                         {% endif %}
                     </small>        
-                </div>
-            </div>
-    </div>        
+       
 
         {% endfor %}
 
-
-
 </main>
+
+{% if user.is_superuser %}
+    
+<a href="{% url 'logout' %}">Logout</a>
+<a href="{% url 'skill' %}">Add Tech</a>
+
+{% endif %}
 {% endblock %}

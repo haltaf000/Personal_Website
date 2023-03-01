@@ -50,10 +50,10 @@ class AddPostView(CreateView):
     fields = '__all__'
     
 class UpdatePostView(UpdateView):
-    model = PostForm
-    form_class: PostForm
+    model = Post
     template_name = 'website/post.html'
     fields = ['title', 'description', 'body', 'date']
+
     
 class DeletePostView(DeleteView):
     model = Post
