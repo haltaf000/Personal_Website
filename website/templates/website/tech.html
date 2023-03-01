@@ -30,12 +30,13 @@
 
         {% endfor %}
 
-</main>
-
-{% if user.is_superuser %}
+        {% if user.is_superuser %}
     
 <a href="{% url 'logout' %}">Logout</a>
 <a href="{% url 'skill' %}">Add Tech</a>
 
 {% endif %}
+
+</main>
+
 {% endblock %}
