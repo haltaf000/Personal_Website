@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: 'Open Sans';
-  padding: 0 16.56rem;
+  margin: 0 16.56rem;
   padding-top: 10px;
   background-color: whitesmoke;
 }
@@ -37,6 +37,10 @@ nav p {
 nav a {
   color: black;
   text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
 }
 
 
