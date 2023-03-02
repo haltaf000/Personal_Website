@@ -8,7 +8,7 @@
 
 {% block content %}
 
-<main>
+
 
 <section>
     <h2>Hello, There!</h2>
@@ -30,7 +30,7 @@
 
 <section>
     <h2>Want to Know More? Check Out My Work!</h2>
-
+<!--
 <div class="card-container">
     <div class="card">
         <h1>🗂️</h1>
@@ -48,9 +48,24 @@
         <a href="{% url 'tech' %}" class="btn btn-outline-primary btn-lg mt-3">Tech</a>
     </div>
 </div>
-
+-->
+<div class="card-container">
+    <div class="card">
+      <h1>🗂️</h1>
+      <a href="{% url 'portfolio' %}" class="btn btn-outline-primary btn-lg mt-3">Portfolio</a>
+    </div>
+    <div class="card">
+      <h1>📋</h1>
+      <a href="https://github.com/haltaf000" class="btn btn-outline-secondary btn-lg mt-3">Github</a>
+    </div>
+    <div class="card">
+      <h1>⌨️</h1>
+      <a href="{% url 'tech' %}" class="btn btn-outline-primary btn-lg mt-3">Tech</a>
+    </div>
+  </div>
+  
 </section>
-</main>
+
 
 
 

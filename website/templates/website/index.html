@@ -44,19 +44,20 @@
         <br>
         <hr/>
             <nav>
-                <p><a href="{% url 'home' %}">Home</a></p>
-                <p><a href="{% url 'portfolio' %}">Projects</a></p>
-                <p><a href="{% url 'writings' %}">Blog</a></p>
-                <p><a href="{% url 'about' %}">Contact</a></p>
+                <p><a href="{% url 'home' %}" class="btn btn-outline-primary btn-lg mt-3">Home</a></p>
+                <p><a href="{% url 'portfolio' %}" class="btn btn-outline-primary btn-lg mt-3">Projects</a></p>
+                <p><a href="{% url 'writings' %}" class="btn btn-outline-primary btn-lg mt-3">Blog</a></p>
+                <p><a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg mt-3">Contact</a></p>
             </nav> 
         <hr/>
     </header>
+    <main>
     {% block content %}
 
 
     
     {% endblock %}
-
+    </main>
 <footer>
     <hr>
     <a href="{% url 'login' %}"><p>@</a> Haider Altaf 2023</p>
