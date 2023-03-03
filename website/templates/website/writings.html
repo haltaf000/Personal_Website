@@ -12,7 +12,7 @@
             <p>Read about my adventures, experiences, and opinions</p>
             <hr>
 
-
+            <section>
         {% csrf_token %}
         {% for post in object_list %}
             <h3><a href="{% url 'article_details' post.pk %}">{{post.title}}</a></h3>
@@ -27,7 +27,7 @@
             <br>
             
         {% endfor %}
-    </div>
+            </section>
 
     {% if user.is_superuser %}
     
