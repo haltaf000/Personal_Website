@@ -23,7 +23,6 @@
                     <p>{{ project.description }}</p>
                     <p><a href="{{ project.github }}">(GitHub)</a></p> 
                     <br>
-                    <br>
                     <small>
                         {% if user.is_superuser %}
                             <a href="{% url 'update_project' project.pk %}">(Edit)</a>
