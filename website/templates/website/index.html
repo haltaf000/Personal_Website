@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{% static 'website/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Haider Altaf</title>
-  
 </head>
 <body>
     <header>
@@ -34,11 +33,9 @@
                       </li>
                     </ul>
                   </section>
-                  
-              </div>
-              
+            </div>
             <div class="two">
-                <img src="{% static 'Images/IMG-0046.jpg' %}" width="125" height="165"> 
+                <img src="{% static 'Images/IMG-0046.jpg' %}" class="profile-image"> 
             </div>
         </div>
         <br>
@@ -53,9 +50,6 @@
     </header>
     <main>
     {% block content %}
-
-
-    
     {% endblock %}
     </main>
 <footer>
@@ -73,9 +67,7 @@
             loop: true
         })
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-</html>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
