@@ -39,7 +39,8 @@
             </div>
         </div>
         <br>
-        <hr/>
+    </header>
+    <hr/>
             <nav>
                 <p><a href="{% url 'home' %}" class="btn btn-outline-primary btn-lg mt-3">Home</a></p>
                 <p><a href="{% url 'portfolio' %}" class="btn btn-outline-primary btn-lg mt-3">Projects</a></p>
@@ -47,7 +48,6 @@
                 <p><a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg mt-3">Contact</a></p>
             </nav> 
         <hr/>
-    </header>
     <main>
     {% block content %}
     {% endblock %}

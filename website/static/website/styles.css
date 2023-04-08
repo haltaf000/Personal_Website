@@ -27,7 +27,7 @@ body {
 }
 
 p {
-  font-size: 1.1rem; 
+  font-size: 1rem; 
 }
 
 main {
@@ -55,9 +55,9 @@ nav p {
 }
 
 nav a {
-  color: #333;
+  color: #000000;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 8px 16px;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -98,7 +98,9 @@ nav a:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+hr {
+  font-size: bold;
+}
 
 .contact1 {
   display: flex;
@@ -358,7 +360,7 @@ h2 {
 h3 {
   font-family: 'Lato', sans-serif, 'Montserrat';
   font-size: 1.7rem;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 h4 {
@@ -379,7 +381,15 @@ h6 {
   margin-bottom: 5px;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
 
+section {
+  padding: 3px 0px;
+}
 
 .info-list {
   font-size: 1.1rem; 
