@@ -310,12 +310,24 @@ form input[type="submit"]:hover {
 }
 
 
+@media only screen and (max-width: 1200px) {
+  body {
+    margin: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 0 1rem;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   header {
-    padding: 0 50px;
+    padding: 0 1rem;
   }
   main {
-    padding: 0 50px;
+    padding: 0 1rem;
   }
   .wrapper {
     flex-direction: column;
