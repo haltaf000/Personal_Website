@@ -37,7 +37,7 @@ def about(request):
 class HomeView(ListView):
     model = Post
     template_name = 'website/writings.html'
-    ordering = ['-id']
+    ordering = ['-date']
     
 class PostDetailView(DetailView):
     model = Post
