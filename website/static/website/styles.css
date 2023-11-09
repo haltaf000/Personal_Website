@@ -50,7 +50,7 @@ nav {
   word-spacing: 50px;
   padding: 10px 0;
 }
-
+ 
 nav p {
   display: inline;    
 }
@@ -427,7 +427,7 @@ section {
 
 .project a {
   text-decoration: none;
-  color: black;
+  color: rgb(22, 49, 87);
   transition: color 0.3s ease-in-out;
   }
   
